@@ -1,0 +1,68 @@
+﻿<Window 
+    x:Class="TetrisClient.MainMenu"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="#A3D30E"
+    ResizeMode="NoResize"
+    Title="Tetris - Menu" 
+    Height="450" 
+    Width="445"
+    >
+    <Grid Margin="0,0,0,-6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <TextBlock
+            FontSize="148"
+            Foreground="#375A10"
+            Grid.Column="1"
+            Height="195"
+            HorizontalAlignment="Center"
+            Margin="0,-37,0,0"
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            Width="388"
+            x:Name="TetrisText">
+            <Run Language="nl-nl" Text="Tetris" />
+        </TextBlock>
+        <Button
+            Background="#375A10"
+            Foreground="#A3D30E"
+            BorderBrush="{x:Null}"
+            Click="ButtonHandler"
+            Content="Single player"
+            Grid.Column="1"
+            Height="64"
+            HorizontalAlignment="Left"
+            Margin="40,209,0,0"
+            VerticalAlignment="Top"
+            Width="113" />
+        <Button
+            Background="#375A10"
+            Foreground="#A3D30E"
+            BorderBrush="{x:Null}"
+            Click="ButtonHandler"
+            Content="Multiplayer"
+            Grid.Column="1"
+            Height="64"
+            HorizontalAlignment="Left"
+            Margin="40,280,0,0"
+            VerticalAlignment="Top"
+            Width="113" />
+        <Label
+            Content="Arrow up = Rotate 90 degrees clockwise&#xD;&#xA;Arrow Down = Rotate 90 degress counterclockwise&#xD;&#xA;Arrow Left = Move left&#xD;&#xA;Arrow Right = Move right&#xD;&#xA;Space = Hard drop&#xD;&#xA;Shift = Soft drop&#xD;&#xA;&#xD;&#xA;R = Restart&#xD;&#xA;Esc = Quit&#xD;&#xA;P = Pause"
+            Foreground="#375A10"
+            Grid.ColumnSpan="2"
+            HorizontalAlignment="Left"
+            HorizontalContentAlignment="Center"
+            Margin="153,188,0,0"
+            VerticalAlignment="Top"
+            VerticalContentAlignment="Center"
+            Width="287"
+            x:Name="GameManual" />
+    </Grid>
+</Window>

@@ -1,0 +1,71 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\HU_school\\SD_2021-2022_year_2\\Block_D\\dotnet\\practicum5\\Tetris\\TetrisClient\\TetrisClient.csproj": {}
+  },
+  "projects": {
+    "E:\\HU_school\\SD_2021-2022_year_2\\Block_D\\dotnet\\practicum5\\Tetris\\TetrisClient\\TetrisClient.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\HU_school\\SD_2021-2022_year_2\\Block_D\\dotnet\\practicum5\\Tetris\\TetrisClient\\TetrisClient.csproj",
+        "projectName": "TetrisClient",
+        "projectPath": "E:\\HU_school\\SD_2021-2022_year_2\\Block_D\\dotnet\\practicum5\\Tetris\\TetrisClient\\TetrisClient.csproj",
+        "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
+        "outputPath": "E:\\HU_school\\SD_2021-2022_year_2\\Block_D\\dotnet\\practicum5\\Tetris\\TetrisClient\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0-windows7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0-windows7.0": {
+            "targetAlias": "net5.0-windows",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0-windows7.0": {
+          "targetAlias": "net5.0-windows",
+          "dependencies": {
+            "Microsoft.AspNetCore.SignalR.Client": {
+              "target": "Package",
+              "version": "[6.0.0-preview.2.21154.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

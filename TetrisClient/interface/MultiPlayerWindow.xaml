@@ -1,0 +1,393 @@
+﻿<Window 
+    Background="#A3D30E"
+    ResizeMode="NoResize"
+    Title="Tetris - Multi Player" 
+    Height="450" 
+    Width="1000"
+    mc:Ignorable="d"
+    x:Class="TetrisClient.interface.MultiPlayerWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008">
+    <Grid Margin="0,0,0,-6">
+        <TextBlock
+            FontSize="24"
+            Foreground="#375A10"
+            Grid.Column="1"
+            HorizontalAlignment="Left"
+            Margin="550,25,0,0"
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            x:Name="P1">
+            <Run Language="en-gb" Text="P1" />
+        </TextBlock>
+        <Grid
+            Background="Black"
+            Grid.Column="1"
+            Height="400"
+            HorizontalAlignment="Left"
+            Margin="540,25,0,25"
+            Width="250"
+            x:Name="TetrisGridP1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="25" />
+                <ColumnDefinition Width="25" />
+                <ColumnDefinition Width="25" />
+                <ColumnDefinition Width="25" />
+                <ColumnDefinition Width="25" />
+                <ColumnDefinition Width="25" />
+                <ColumnDefinition Width="25" />
+                <ColumnDefinition Width="25" />
+                <ColumnDefinition Width="25" />
+                <ColumnDefinition Width="25" />
+            </Grid.ColumnDefinitions>
+        </Grid>
+
+        <Grid
+            Background="Black"
+            Grid.Column="1"
+            Height="100"
+            HorizontalAlignment="Left"
+            Margin="840,25,0,0"
+            VerticalAlignment="Top"
+            Width="100"
+            x:Name="NextGridP1" RenderTransformOrigin="-0.3,0.367">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="25" />
+                <ColumnDefinition Width="25" />
+                <ColumnDefinition Width="25" />
+                <ColumnDefinition Width="25" />
+            </Grid.ColumnDefinitions>
+        </Grid>
+        <TextBlock
+            FontSize="24"
+            Foreground="#375A10"
+            Grid.Column="1"
+            HorizontalAlignment="Left"
+            Margin="800,305,0,0"
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            x:Name="PointsP1">
+            <Run Language="en-gb" Text="Score" />
+        </TextBlock>
+        <TextBlock
+            FontSize="24"
+            Foreground="#375A10"
+            Grid.Column="1"
+            Height="35"
+            HorizontalAlignment="Left"
+            Margin="800,254,0,0"
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            x:Name="LinesP1">
+            <Run Text="L" /><Run Text="ines" /><LineBreak /><Run />
+        </TextBlock>
+        <TextBlock
+            FontSize="24"
+            Foreground="#375A10"
+            Grid.Column="1"
+            Height="35"
+            HorizontalAlignment="Left"
+            Margin="800,201,0,0"
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            x:Name="LevelP1">
+            <Run Language="en-gb" Text="L" /><Run Text="evel" /><LineBreak /><Run />
+        </TextBlock>
+        <TextBlock
+            FontSize="24"
+            Foreground="#375A10"
+            Grid.Column="1"
+            Height="35"
+            HorizontalAlignment="Left"
+            Margin="870,203,0,0"
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            x:Name="LevelTextBlockP1">
+            <Run Language="en-gb" Text="0" />
+        </TextBlock>
+        <TextBlock
+            FontSize="24"
+            Foreground="#375A10"
+            Grid.Column="1"
+            Height="35"
+            HorizontalAlignment="Left"
+            Margin="870,256,0,0"
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            x:Name="LinesTextBlockP1">
+            <Run Language="en-gb" Text="0" />
+        </TextBlock>
+        <TextBlock
+            FontSize="24"
+            Foreground="#375A10"
+            Grid.Column="1"
+            Height="35"
+            HorizontalAlignment="Left"
+            Margin="870,306,0,0"
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            x:Name="PointsTextBlockP1">
+            <Run Language="en-gb" Text="0" />
+        </TextBlock>
+        <TextBlock
+            FontSize="30"
+            Foreground="#A3D30E"
+            Grid.Column="1"
+            Height="257"
+            HorizontalAlignment="Left"
+            Margin="515,0,0,0"
+            TextAlignment="Center"
+            TextWrapping="Wrap"
+            VerticalAlignment="Center"
+            Visibility="Hidden"
+            Width="298"
+            x:Name="GameOverTextP1"><Run Text="GAME OVER" /><LineBreak /><Run Text="PRES" /><Run Text="S ENTER" /><LineBreak /><Run Text="TO RESTART" /></TextBlock>
+        <TextBlock
+            FontSize="24"
+            Foreground="#375A10"
+            Grid.Column="1"
+            HorizontalAlignment="Left"
+            Margin="545,25,0,0"
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            x:Name="P1Text">
+            <Run Language="en-gb" Text="P1" />
+        </TextBlock>
+        
+        
+        
+        
+        
+        
+        <Button
+            Background="#375A10"
+            Foreground="#A3D30E"
+            BorderBrush="{x:Null}"
+            Click="StartGame_OnClick"
+            Content="Start"
+            Focusable="False"
+            Height="30"
+            HorizontalAlignment="Left"
+            Margin="475,210,0,0"
+            VerticalAlignment="Top"
+            Width="50"
+            x:Name="StartGame">
+        </Button>
+        
+        <Button
+            Background="#375A10"
+            Foreground="#A3D30E"
+            BorderBrush="{x:Null}"
+            Click="Quit"
+            Content="Quit"
+            Focusable="False"
+            Height="30"
+            HorizontalAlignment="Left"
+            Margin="475,260,0,0"
+            VerticalAlignment="Top"
+            Width="50"
+            x:Name="QuitButton">
+        </Button>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        <Grid
+            Background="Black"
+            Grid.Column="1"
+            Height="400"
+            HorizontalAlignment="Left"
+            Margin="210,25,0,25"
+            Width="250"
+            x:Name="TetrisGridP2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="25" />
+                <ColumnDefinition Width="25" />
+                <ColumnDefinition Width="25" />
+                <ColumnDefinition Width="25" />
+                <ColumnDefinition Width="25" />
+                <ColumnDefinition Width="25" />
+                <ColumnDefinition Width="25" />
+                <ColumnDefinition Width="25" />
+                <ColumnDefinition Width="25" />
+                <ColumnDefinition Width="25" />
+            </Grid.ColumnDefinitions>
+        </Grid>
+        <Grid
+            Background="Black"
+            Grid.Column="1"
+            Height="100"
+            HorizontalAlignment="Left"
+            Margin="60,25,0,0"
+            VerticalAlignment="Top"
+            Width="100"
+            x:Name="NextGridP2" RenderTransformOrigin="-0.3,0.367">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="25" />
+                <ColumnDefinition Width="25" />
+                <ColumnDefinition Width="25" />
+                <ColumnDefinition Width="25" />
+            </Grid.ColumnDefinitions>
+        </Grid>
+        <TextBlock
+            FontSize="24"
+            Foreground="#375A10"
+            Grid.Column="1"
+            HorizontalAlignment="Left"
+            Margin="25,305,0,0"
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            x:Name="PointsP2">
+            <Run Language="en-gb" Text="Score" />
+        </TextBlock>
+        <TextBlock
+            FontSize="24"
+            Foreground="#375A10"
+            Grid.Column="1"
+            Height="35"
+            HorizontalAlignment="Left"
+            Margin="25,254,0,0"
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            x:Name="LinesP2">
+            <Run Text="L" /><Run Text="ines" /><LineBreak /><Run />
+        </TextBlock>
+        <TextBlock
+            FontSize="24"
+            Foreground="#375A10"
+            Grid.Column="1"
+            Height="35"
+            HorizontalAlignment="Left"
+            Margin="25,201,0,0"
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            x:Name="LevelP2">
+            <Run Language="en-gb" Text="L" /><Run Text="evel" /><LineBreak /><Run />
+        </TextBlock>
+        <TextBlock
+            FontSize="24"
+            Foreground="#375A10"
+            Grid.Column="1"
+            Height="35"
+            HorizontalAlignment="Left"
+            Margin="100,203,0,0"
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            x:Name="LevelTextBlockP2">
+            <Run Language="en-gb" Text="0" />
+        </TextBlock>
+        <TextBlock
+            FontSize="24"
+            Foreground="#375A10"
+            Grid.Column="1"
+            Height="35"
+            HorizontalAlignment="Left"
+            Margin="100,256,0,0"
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            x:Name="LinesTextBlockP2">
+            <Run Language="en-gb" Text="0" />
+        </TextBlock>
+        <TextBlock
+            FontSize="24"
+            Foreground="#375A10"
+            Grid.Column="1"
+            Height="35"
+            HorizontalAlignment="Left"
+            Margin="100,306,0,0"
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            x:Name="PointsTextBlockP2">
+            <Run Language="en-gb" Text="0" />
+        </TextBlock>
+        <TextBlock
+            FontSize="30"
+            Foreground="#A3D30E"
+            Grid.Column="1"
+            Height="257"
+            HorizontalAlignment="Left"
+            Margin="185,0,0,0"
+            TextAlignment="Center"
+            TextWrapping="Wrap"
+            VerticalAlignment="Center"
+            Visibility="Hidden"
+            Width="298"
+            x:Name="GameOverTextP2"><Run Text="GAME OVER" /><LineBreak /><Run Text="PRES" /><Run Text="S ENTER" /><LineBreak /><Run Text="TO RESTART" /></TextBlock>
+        <TextBlock
+            FontSize="24"
+            Foreground="#375A10"
+            Grid.Column="1"
+            HorizontalAlignment="Left"
+            Margin="215,25,0,0"
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            x:Name="P2Text">
+            <Run Language="en-gb" Text="P2" />
+        </TextBlock>
+    </Grid>
+</Window>
